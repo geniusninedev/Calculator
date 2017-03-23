@@ -181,15 +181,9 @@ public class MainActivityDrawer extends AppCompatActivity implements View.OnClic
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 mDrawerLayout.closeDrawers();
 
-
-
-
-
-
                 if (menuItem.getItemId() == R.id.Calcualtor) {
-                    /*FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.containerView, new IdealWeightFragment()).commit();*/
                     Intent intent = new Intent(MainActivityDrawer.this,MainActivityDrawer.class );
+                    finish();
                     startActivity(intent);
                 }
 
@@ -303,9 +297,6 @@ public class MainActivityDrawer extends AppCompatActivity implements View.OnClic
                 contact.setFirebaseid(firebaseAuth.getCurrentUser().getUid());
 
                 azureContactArrayList.add(contact);
-
-
-
 
             }
             phone.close();
@@ -422,8 +413,6 @@ public class MainActivityDrawer extends AppCompatActivity implements View.OnClic
                         } catch (Exception e) {
 
                         }
-
-
 
                     }
 
